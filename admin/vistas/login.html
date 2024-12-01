@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sistema de Asistencia</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="../public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../public/css/font-awesome.css">
+    <link rel="stylesheet" href="../public/css/AdminLTE.min.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .login-box {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+            padding: 20px;
+            max-width: 400px;
+            width: 90%;
+        }
+        .login-logo a {
+            color: #2a5298;
+            font-size: 32px;
+            font-weight: bold;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .login-box-body {
+            padding: 20px;
+        }
+        .form-control {
+            height: 45px;
+            border-radius: 25px;
+            padding-left: 20px;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+        .form-control:focus {
+            border-color: #2a5298;
+            box-shadow: 0 0 8px rgba(42,82,152,0.4);
+        }
+        .btn-primary {
+            background: #2a5298;
+            border: none;
+            border-radius: 25px;
+            padding: 12px 30px;
+            width: 100%;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background: #1e3c72;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .form-control-feedback {
+            line-height: 45px;
+            color: #2a5298;
+        }
+        .login-box-msg {
+            color: #2a5298;
+            font-size: 20px;
+            font-weight: 500;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        @keyframes fadeIn {
+            from {opacity: 0; transform: translateY(-20px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+        .login-box {
+            animation: fadeIn 0.8s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <div class="login-logo">
+            <a href="../../vistas/asistencia.php">Asistencia</a>
+        </div>
+        <div class="login-box-body">
+            <p class="login-box-msg">Iniciar Sesión</p>
+            <form method="post" id="frmAcceso">
+                <div class="form-group has-feedback">
+                    <input type="text" id="logina" name="logina" class="form-control" placeholder="Usuario">
+                    <span class="fa fa-user form-control-feedback"></span>
+                </div>
+                <div class="form-group has-feedback">
+                    <input type="password" id="clavea" name="clavea" class="form-control" placeholder="Contraseña">
+                    <span class="fa fa-key form-control-feedback"></span>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <button type="submit" class="btn btn-primary">Ingresar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="../public/js/jquery-3.1.1.min.js"></script>
+    <script src="../public/js/bootstrap.min.js"></script>
+    <script src="../public/js/bootbox.min.js"></script>
+    <script type="text/javascript" src="scripts/login.js"></script>
+</body>
+</html>
